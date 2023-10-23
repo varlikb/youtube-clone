@@ -10,12 +10,15 @@ html{
 }
 body{
     height: 100%;
+    overflow: hidden;
+    font: -webkit-small-control;
 }
 main{
     height: 100%;
 }
 header{
     display: flex;
+    margin: 0 26px;
 }
 .navbar-container{
     display: flex;
@@ -102,8 +105,8 @@ header{
 }
 .end{
     display: flex;
-    justify-content: flex-end;
-    min-width: 225px;
+    justify-content: center;
+    min-width: 225px; 
 }
 .end-div{
     display: flex;
@@ -133,6 +136,14 @@ header{
     justify-content: center;
     width: 40px;
     height: 40px;
+    margin: 12px 12px 0px 0px;
+}
+#desc-div a{
+  font-size: 8px;
+  display: inline-block;
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
 }
 .notifications:hover{
     text-decoration: underline;
@@ -141,25 +152,27 @@ header{
 }
 .grid-container{
     display: grid;
-    grid-template-columns: 15% 85%;
+    grid-template-columns: 10% 90%;
     grid-gap: 10px;
     height: 100%;
+    overflow-y: scroll;
 }
 .sidebar {
     margin: 0;
     padding: 0;
     width: 200px;
-    background-color:#0F0F0F;
     position: fixed;
     height: 100%;
     overflow: auto;
   }
-  
   .sidebar a {
     display: block;
     color: rgb(253, 249, 249);
     padding: 10px;
     text-decoration: none;
+    display: flex;
+    align-items: center;
+    height: 40px;
   }
    
   .sidebar a.active {
@@ -177,27 +190,21 @@ header{
     padding: 1px 16px;
     height: 1000px;
   }
-  ::-webkit-scrollbar {
-    width: 12px; /* Width of the scrollbar */
-}
-
-::-webkit-scrollbar-track {
-    background: transparent; /* Background color of the track */
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: #202020; /* Color of the scrollbar thumb */
-    border-radius: 6px; /* Rounded corners for the thumb */
-}
-
-/* Optional: You can style the scrollbar on hover as well */
-::-webkit-scrollbar-thumb:hover {
-    background-color: #202020; /* Color on hover */
-}
+  .sidebar::-webkit-scrollbar {
+    width: 5px;
+    background-color: none;
+  }
+  .sidebar:hover::-webkit-scrollbar {
+    width: 5px; 
+    background-color: none;
+  }
+  .sidebar::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+  }
 .categories{
     height: 32px;
     min-width: 12px;
-    font-size: 1.4rem;
+    font-size: 1rem;
     line-height: 2rem;
     display: inline-flex;
     align-items: center;
@@ -209,39 +216,330 @@ header{
     color: white;
     background-color: hsl(0 0% 19% / 1);
     font-family: "Roboto","Arial",sans-serif;
+    padding: 0 4px;
 }
 .scroll-container {
+    margin-top: 12px;
     width: 100%;
     overflow-x: auto;
     white-space: nowrap;
 }
 .scroll-content {
-    width: fit-content; /* Değişiklik burada */
+    width: fit-content; 
 }
 .scroll-content div {
     display: inline-block;
-    margin-right: 20px; /* İhtiyaca göre ayarlayın */
+    margin-right: 20px; 
 }
 .grid-container2 {
     display: grid;
-    grid-template-columns: auto auto auto;
-    background-color: #2196F3;
+    grid-template-columns: 20% 20% 20% 20% 20% ;
+    grid-template-rows: auto auto auto ;
     padding: 10px;
+    margin: 0 16px;
+    grid-row-gap: 3rem;
   }
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+ ::-webkit-scrollbar {
+    width: 5px; /* Varsayılan genişlik */
+  }
+  ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+  }
+
   .grid-item2 {
     background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid rgba(0, 0, 0, 0.8);
-    padding: 20px;
-    font-size: 30px;
-    text-align: center;
+    border: none;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .vid-image{
+    width: 95%;
+  }
+  .vid-image img{
+    border-radius: 30px;
+  }
+  .vid-content{
+    display: flex;
+    flex: auto;
+    height: 100px;
+    margin-top: 8px;
+    overflow-x: hidden;
+    padding-right: 24px;
+  }
+  .caption{
+    line-height: height 2.2rem;
+    margin: 0;
+    font-size: 0.8;
+  }
+  .desc p {
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+  }
+  .end a {
+    margin: 0px;
+  }
+  .shorts{
+    display: flex;
+    margin: 0 16px;
+  }
+  .shorts-title {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    margin: 0 36px;
+  }
+  .grid-shorts {
+    display: grid;
+    grid-template-columns: 14.2857142857% 14.2857142857% 14.2857142857% 14.2857142857% 14.2857142857% 14.2857142857% 14.2857142857% 14.2857142857% ;
+    grid-template-rows: auto;
+    padding: 10px;
+    margin: 0 16px;
+    grid-row-gap: 3rem;
+  }
+  .shorts-item{
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .shorts-card{
+    width: 90%;
+    height: 100%;
+  }
+  .shorts-desc{
+    margin-top: 12ppx;
+  }
+  .shorts-images img {
+    width: 90%;
   }
   @media only screen and (max-width: 1284px) {
-    body {
-      background-color: pink;
+    header{
+      margin: 0px 0px 0px 10px;
+    }
+    .navbar-container{
+      height: 48px;
+      display: flex;
+      justify-content: initial;
     }
     .menu-logo{
-        width: 0px;
-        height: 0px;
+      width: 0px;
+      height: 0px;
+    display: none;
+    }
+    .voice-search-button{
+      display: none;
+    }
+    .search-div{
+      display: none;
+    }
+    .share{
+      display: none;
+    }
+    .notifications{
+      display: none;
+    }
+    .center{
+      flex: 0 1 100%;
+      justify-content: end;
+    }
+    .end{
+      display: inline-block;
+      min-width: 0px;
+    }
+    .submit-icon{
+      border: 0;
+      background-color: transparent;
+      border-color: 0;
+      border-radius: 0;
+    }
+    .container-sidebar{
+      display: none;
+    }
+    .sidebar{
+      left: 0;
+      bottom: 0;
+      display: flex;
+      justify-content: space-around;
+      margin: 0;
+      width: 100%;
+      position: fixed;
+      height: 48px;
+      overflow: hidden;
+      background-color: rgb(31, 28, 28);
+      align-items: center;
+    }
+    #history {
+      display: none;
+    }
+    #watchlater{
+      display: none;
+    }
+    #likes{
+      display: none;
+    }
+    #trends{
+      display: none;
+    }
+    #music{
+      display: none;
+    }
+    #live{
+      display: none;
+    }
+    #game{
+      display: none;
+    }
+    #sports{
+      display: none;
+    }
+    #browse{
+      display: none;
+    }
+    #youtube-pre{
+      display: none;
+    }
+    #youtube-music{
+      display: none;
+    }
+    #youtube-kids{
+      display: none;
+    }
+    #settings{
+      display: none;
+    }
+    #notific{
+      display: none;
+    }
+    #help{
+      display: none;
+    }
+    #feedback{
+      display: none;
+    }
+    .desc-div{
+      display: none;
+    }
+    #home{
+      display: none;
+    }
+    #sidebar-hr{
+      display: none;
+    }
+    h4{
+      display: none;
+    }
+    #sidebar-h{
+      display: none !important;
+    }
+    .desc-div{
+      display:none !important;
+    }
+    .grid-container{
+      grid-template-columns: 100%;
+    }
+    .vid-content{
+      height: auto;
+    }
+    .grid-container2{
+      grid-template-columns: 25% 25% 25% 25%;
+      margin: 0px;
     }
   }
-  
+  @media only screen and (max-width: 1024px) {
+    header{
+      margin: 0px;
+    }
+    .grid-container2{
+      grid-template-columns: 33.3% 33.3% 33.3%;
+      padding: 0px;
+      margin: 0px;
+      grid-row-gap: 1rem; 
+    }
+    .grid-shorts{
+      grid-template-columns: 16.6% 16.6% 16.6% 16.6% 16.6% 16.6% 16.6% 16.6%;
+      margin: 0;
+      overflow-x: scroll;
+    }
+  }
+  @media only screen and (max-width: 840px) {
+    header{
+      margin: 0px;
+    }
+    .grid-container2{
+      grid-template-columns: 50% 50%;
+      padding: 0px;
+      margin: 0px;
+      grid-row-gap: 1rem;
+    }
+    .grid-shorts{
+      grid-template-columns: 25% 25% 25% 25% 25% 25% 25%;
+      margin: 0;
+      overflow-x: scroll;
+    }
+    #shorts svg{
+      filter: invert(1);
+    }
+  }
+  @media only screen and (max-width: 580px) {
+    body{
+      margin: 0px;
+    }
+    header{
+      margin: 0;
+    }
+    .nav{
+      margin-top: 5px;
+      border-bottom: 1px solid aqua;
+    }
+    .grid-container2{
+      grid-template-columns: 100%;
+      padding: 0px;
+      margin: 0px;
+      grid-row-gap: 1rem;
+    }
+    .grid-container2 img{
+      border-radius: 0;
+    }
+    .sidebar{
+      align-items: center;
+    }
+    .sidebar a {
+      padding: 0px;
+      width: 93px;
+      flex-direction: column;
+    }
+    .end{
+      margin-right: 15px;
+    }
+    #homepage svg{
+      margin-right: 0px !important;
+    }
+    #shorts svg {
+      margin-right: 0px !important;
+    }
+    #subs svg {
+      margin-right: 0px !important;
+    }
+    #library svg {
+      margin-right: 0px !important;
+    }
+    .vid-image{
+      width: 100%;
+    }
+    .grid-shorts{
+      grid-template-columns: 40% 40% 40% 40% 40% 40% 40% 40%;
+      margin-left: 12px;
+      padding: 12px 0;
+    }
+    #shorts svg {
+      filter: invert(1);
+    }
+  }
